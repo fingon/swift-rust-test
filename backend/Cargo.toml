@@ -1,0 +1,27 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+uniffi = { version = "0.28.1", features = ["cli"]  }
+ureq = "2.10.1"
+
+[build-dependencies]
+uniffi = { version = "0.28.1", features = ["build"] }
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "uniffi-bindgen.rs"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+name = "backend"
+
+[profile.release]
+# from https://boehs.org/node/uniffi
+# 31mb -> 7.1mb
+lto = "fat"
+# these two strip off another 0.3mb
+panic = "abort"
+strip = true
