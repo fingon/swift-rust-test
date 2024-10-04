@@ -43,3 +43,8 @@ mstenber@hana ~/projects/swift-rust-test/backend>du -hs ../swift-rust-test/backe
 mstenber@hana ~/projects/swift-rust-test/backend>du -hs ../swift-rust-test/backend.xcframework
  19M	../swift-rust-test/backend.xcframework
 ```
+
+
+# See also
+
+[Go version](https://github.com/fingon/swift-go-test)
