@@ -45,7 +45,14 @@ mstenber@hana ~/projects/swift-rust-test/backend>time ./build.sh
 
 # How big is the result? (3 arches)
 
-## Default
+## Default debug
+
+```
+mstenber@hana ~/projects/swift-rust-test/backend>du -hs ../swift-rust-test/backend.xcframework
+389M	../swift-rust-test/backend.xcframework
+```
+
+## Default release
 
 ```
 mstenber@hana ~/projects/swift-rust-test/backend>du -hs ../swift-rust-test/backend.xcframework
