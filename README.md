@@ -10,7 +10,14 @@ Disclaimer: Speed results are with Macbook Pro (14" 2021 model with M1 Pro)
 
 # How fast is it to build the backend from scratch? (3 arches)
 
-## Default
+## Default debug
+
+```
+mstenber@hana ~/projects/swift-rust-test/backend>time ./build.sh
+./build.sh  155.63s user 13.62s system 432% cpu 39.165 total
+```
+
+## Default release
 
 ```
 mstenber@hana ~/projects/swift-rust-test/backend>git clean -dfx .
@@ -27,12 +34,12 @@ mstenber@hana ~/projects/swift-rust-test/backend>time ./build.sh
 ./build.sh  294.49s user 14.31s system 217% cpu 2:21.75 total
 ```
 
-# How fast is incremental compilation? (with disk cache hot)
+# How fast is incremental compilation? (debug build, with disk cache hot)
 
 ```
 mstenber@hana ~/projects/swift-rust-test/backend>echo >> src/lib.rs
 mstenber@hana ~/projects/swift-rust-test/backend>time ./build.sh
-./build.sh  28.43s user 0.98s system 97% cpu 30.073 total
+./build.sh  2.41s user 1.36s system 82% cpu 4.589 total
 ```
 
 
