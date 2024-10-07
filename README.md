@@ -27,6 +27,15 @@ mstenber@hana ~/projects/swift-rust-test/backend>time ./build.sh
 ./build.sh  294.49s user 14.31s system 217% cpu 2:21.75 total
 ```
 
+# How fast is incremental compilation? (with disk cache hot)
+
+```
+mstenber@hana ~/projects/swift-rust-test/backend>echo >> src/lib.rs
+mstenber@hana ~/projects/swift-rust-test/backend>time ./build.sh
+./build.sh  28.43s user 0.98s system 97% cpu 30.073 total
+```
+
+
 # How big is the result? (3 arches)
 
 ## Default
